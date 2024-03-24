@@ -17,6 +17,23 @@
             background-color: azure;
             -moz-text-decoration-color: ;   
             } 
+            .audio-container {
+    position: relative;
+}
+
+#audioPlayer {
+    display: none; /* Hide default audio player */
+}
+
+.play {
+    /* Add styling for your play button */
+    /* For example: */
+    width: 50px;
+    height: 50px;
+    background-image: url('play-icon.png'); /* Your play icon */
+    background-size: cover;
+}
+
                  </style>                   
 </head>
 <body>
@@ -28,10 +45,16 @@
     </nav>
     <hr>
     <a href="./index.html#bottom">Bottom</a>
-        <h1>MUHAMMAD ADEEL</h1>
+         <h1>MUHAMMAD ADEEL <div class="audio-container">
+            <audio id="myAudio" src="./Music/AUD-20240324-WA0000.opus"></audio>
+            <button id="playButton" class="fa-solid fa-volume-high"></button>
+            
+        </div></h1>
+         
+        
     <img src="./images/MTXX_MH20230701_173908433_image_repair_1688220639940.jpg" alt="this is my pic"
     title="My pic" width="130px"><br>
-    <audio controls src="./Music/please-calm-my-mind-125566.mp3"></audio>
+    
     <P>I am Muhammad Adeel. <br>I am student of BS CS. <br></P>
 
     <table border="">    <h1>Information Table</h1>
@@ -83,4 +106,24 @@
     <hr>
     <footer style="text-align: center; font-style: bold; color: white; background-color: black;">This is my Portfolio Website Home page.</footer>
 </body>
+
+<script>
+    var audio = document.getElementById('myAudio');
+var playButton = document.getElementById('playButton');
+
+playButton.addEventListener('click', function() {
+    if (audio.paused) {
+        audio.play();
+        playButton.classList.remove('play');
+        playButton.classList.add('pause'); // Add styling for pause icon
+        playButton.style.backgroundImage = 'url("pause-icon.png")'; // Change to pause icon
+    } else {
+        audio.pause();
+        playButton.classList.remove('pause');
+        playButton.classList.add('play');
+        playButton.style.backgroundImage = 'url("play-icon.png")'; // Change to play icon
+    }
+});
+
+</script>
 </html>
