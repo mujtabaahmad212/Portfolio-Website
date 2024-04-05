@@ -4,3 +4,34 @@ body{
 h1,h2{
     color: brown;
 }
+
+body{
+    background-color: #000000;
+    color: #ffffff;
+}
+header, footer{
+font-size: xx-large;
+ background-color: #8a46c9;
+  color: white; 
+  font-weight: 500;
+   text-align: center;
+}
+a{
+    color: #297ee0;
+}
+table{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+ .tr{
+      background-color: #26a831;
+ }
+ tr{
+    background-color: azure;
+ }
+ fieldset{
+    background-color: #aaa843;
+ }
+ nav{
+    
+ }
